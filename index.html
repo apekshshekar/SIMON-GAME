@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Futuristic Simon</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="particles" id="particles"></div>
+
+<div class="game-container">
+<!-- Left Panel: Leaderboard -->
+<div class="left-panel">
+    <div class="leaderboard">
+        <div class="leaderboard-title">🏆 Leaderboard</div>
+        <div class="leaderboard-list" id="leaderboardList">
+            <div class="leaderboard-item">
+                <span class="leaderboard-rank">1.</span>
+                <span class="leaderboard-name">No scores yet</span>
+                <span class="leaderboard-score">-</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Game Area -->
+<div class="main-game">
+    <h1 class="title">SIMON GAME</h1>
+    
+    <div class="score-display">
+        <div class="score-item">
+            <div class="score-label">Level</div>
+            <div class="score-value" id="level">1</div>
+        </div>
+        <div class="score-item">
+            <div class="score-label">Score</div>
+            <div class="score-value" id="score">0</div>
+        </div>
+    </div>
+
+    <div class="status-message" id="status">Click START to begin your journey</div>
+
+    <div class="game-board">
+        <div class="simon-button red" data-color="red" data-index="0"></div>
+        <div class="simon-button blue" data-color="blue" data-index="1"></div>
+        <div class="simon-button green" data-color="green" data-index="2"></div>
+        <div class="simon-button yellow" data-color="yellow" data-index="3"></div>
+    </div>
+
+    <div class="control-panel">
+        <button class="control-button" id="startBtn">Start</button>
+        <button class="control-button" id="resetBtn">Reset</button>
+    </div>
+</div>
+
+<!-- Right Panel: Player Setup -->
+<div class="right-panel">
+    <div class="player-input">
+        <div class="player-input-title">Player Setup</div>
+        <input type="text" class="player-name-input" id="playerName" placeholder="Enter your name" maxlength="15">
+        <div class="current-player" id="currentPlayer">Player: Guest</div>
+    </div>
+</div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
